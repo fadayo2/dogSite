@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0);
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    /* background-image: url(img/dogBc.png); */
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.726);
+    width: 100vw;
+    height: 70px;
+    border-bottom: 1px solid rgb(228, 225, 225);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px 0px 40px;
+    z-index: 10;
+} 
+
+img {
+    width: 100px;
+}
+
+.desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    /* border: 1px solid black; */
+}
+
+#menu {
+    display: none;
+}
+
+#closemenu {
+    display: none;
+}
+
+.menuDiv {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 5rem;
+    display: block;
+    width: 0vw;
+    height: 0px;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    background-color: rgba(255, 99, 71, 0.205);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.desktop li {
+    display: inline;
+    list-style-type: none;
+    font-size: 20px;
+    font-family: "Protest Strike", sans-serif;
+    cursor: pointer;
+    /* color: #fb8a22; */
+}
+
+.mobile {
+    display: none;
+}
+
+.herosection {
+    position: relative;
+    top: 71px;
+    /* border: 1px solid black; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;  
+    /* background-image: url(img/dogBc.png); */
+}
+.herotxt {
+    margin-top: 2rem;
+    width: 45vw;
+    height: 80vh;
+    /* border: 1px solid black; */
+    font-size: 55px;
+    line-height: 7rem;
+    font-family: "Diphylleia", serif;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(5deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.herotxt button {
+    transform: rotate(-5deg);
+    padding: 15px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid rgb(175, 170, 170);
+    color: black;
+    background: none;
+    font-family: "Protest Strike", sans-serif;
+    transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+}
+
+.herotxt button:hover {
+    background-color: #fb8a22;
+    color: white;
+}
+
+/* .herotxt span {
+    font-family: "Merriweather", serif;
+} */
+
+.heroimg {
+    width: 50vw;
+    height: 90vh;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.img {
+    position: absolute;
+    background: url(img/dogSketch-.png);
+    width: 30vw;
+    height: 70vh;
+    top: 100px;
+    background-size: cover;
+    z-index: -2;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0px 40px 0px 40px;
+    }
+    .desktop {
+        display: none;
+    }
+    #menu {
+        display: block;
+    }
+    #closemenu {
+        display: none;
+    }
+    
+    .mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: inherit;
+        height: inherit;
+    }
+    .mobile li{
+        list-style-type: none;
+        font-family: sans-serif;
+        font-family: "Protest Strike", sans-serif;
+    }
+
+    .herosection {
+        display: block;
+        position: relative;
+    }
+    .heroimg {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+    }
+    .img {
+        width: 100vw;
+        height: 75vh;
+    }
+    .herotxt {
+        position: absolute;
+        top: 5.5rem;
+        width: 100vw;
+        height: 80vh;
+        z-index: 5;
+        background-color: #ffffffce;
+        transform: rotate(0);
+        font-size: 40px;
+        line-height: normal;
+        justify-content: space-around;
+        font-weight: bolder;
+        gap: 2rem;
+    }
+
+    svg {
+        z-index: 6;
+    }
+}
+
+@media (max-width: 1024px) {
+    .herosection {
+        display: block;
+        position: relative;
+    }
+    .heroimg {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+    }
+    .img {
+        width: 100vw;
+        height: 75vh;
+    }
+    .herotxt {
+        position: absolute;
+        top: 5.5rem;
+        width: 100vw;
+        height: 80vh;
+        z-index: 5;
+        background-color: #ffffffce;
+        transform: rotate(0);
+        font-size: 40px;
+        line-height: normal;
+        justify-content: space-around;
+        font-weight: bolder;
+        gap: 2rem;
+    }
+
+    svg {
+        z-index: 6;
+    }
+}
