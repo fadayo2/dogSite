@@ -18,7 +18,7 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    /* background-image: url(img/dogBc.png); */
+    /* background-image: url(img/waterbg2.png); */
     overflow-x: hidden;
 }
 
@@ -27,7 +27,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.726);
     width: 100vw;
     height: 70px;
-    border-bottom: 1px solid rgb(228, 225, 225);
+    border-bottom: 1px solid rgb(228, 227, 225);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,6 +37,10 @@ nav {
 
 img {
     width: 100px;
+}
+
+.logo {
+    cursor: pointer;
 }
 
 .desktop {
@@ -65,7 +69,7 @@ img {
     height: 0px;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
-    background-color: rgba(255, 99, 71, 0.205);
+    background-color: #fb8a22;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -79,7 +83,13 @@ img {
     font-size: 20px;
     font-family: "Protest Strike", sans-serif;
     cursor: pointer;
-    /* color: #fb8a22; */
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+}
+
+.desktop li:hover {
+    color: #fb8a22;
+    transform: translate(1px , 1px);
 }
 
 .mobile {
@@ -95,7 +105,6 @@ img {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;  
-    /* background-image: url(img/dogBc.png); */
 }
 .herotxt {
     margin-top: 2rem;
@@ -105,6 +114,7 @@ img {
     font-size: 55px;
     line-height: 7rem;
     font-family: "Diphylleia", serif;
+    font-family: "Protest Strike", sans-serif;
     font-weight: bold;
     text-align: center;
     transform: rotate(5deg);
@@ -113,7 +123,8 @@ img {
     justify-content: space-between;
     flex-direction: column;
     padding-top: 70px;
-    padding-bottom: 100px;
+    color: #fb8a22;
+    /* padding-bottom: 0px; */
 }
 
 .herotxt button {
@@ -133,13 +144,12 @@ img {
 .herotxt button:hover {
     background-color: #fb8a22;
     color: white;
+    transform: translate(10px , -10px);
 }
 
-/* .herotxt span {
-    font-family: "Merriweather", serif;
-} */
-
 .heroimg {
+    background-image: url(img/tornpaperbg.png);
+    background-size: cover;
     width: 50vw;
     height: 90vh;
     /* border: 1px solid black; */
@@ -147,16 +157,68 @@ img {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .img {
     position: absolute;
-    background: url(img/dogSketch-.png);
+    background: url(img/dogSketch3-.png);
     width: 30vw;
-    height: 70vh;
-    top: 100px;
+    height: 80vh;
+    top: 50px;
     background-size: cover;
-    z-index: -2;
+    z-index: -1;
+    transition-duration: .5;
+    transition-timing-function: ease-in-out;
+}
+
+header {
+    margin-top: 10rem;
+    border-top: 1px solid rgb(211, 211, 211);
+    border-bottom: 1px solid rgb(211, 211, 211);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    text-wrap: wrap;
+    color: #fb8a22;
+    font-family: "Protest Strike", sans-serif;
+    font-size : clamp(1.3rem, 2vw, 5rem);
+    word-spacing: 5px;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.products {
+    margin-top: 10rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 3rem 3rem;
+    height: 100vh;
+}
+
+.perspectiveCard {
+    /* border: 1px solid black; */
+    width: 30vw;
+    height: fit-content;
+    perspective: 500px;
+}
+
+.productCard {
+    width: inherit;
+    height: 70vh;
+    border: 1px solid black;
+    /* background-color: red; */
+    transform: rotateY(5deg);
+    transform-style: preserve-3d;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.productCard:hover {
+    transform: rotateY(0deg);
 }
 
 @media (max-width: 768px) {
@@ -203,8 +265,8 @@ img {
     .herotxt {
         position: absolute;
         top: 5.5rem;
-        width: 100vw;
-        height: 80vh;
+        width: 40vw;
+        height: 100vh;
         z-index: 5;
         background-color: #ffffffce;
         transform: rotate(0);
@@ -213,16 +275,23 @@ img {
         justify-content: space-around;
         font-weight: bolder;
         gap: 2rem;
+        padding-top: 0px;
     }
-
-    svg {
-        z-index: 6;
+    header {
+        padding-bottom: 0;
+    }
+    .products {
+        margin-top: 3rem;
+        grid-template-columns: auto;
+    }
+    .perspectiveCard {
+        width: 80vw;
     }
 }
 
 @media (max-width: 1024px) {
     .herosection {
-        display: block;
+        display: flex;
         position: relative;
     }
     .heroimg {
@@ -247,9 +316,13 @@ img {
         justify-content: space-around;
         font-weight: bolder;
         gap: 2rem;
+        /* word-break: break-all; */
+        /* text-wrap: wrap; */
     }
-
-    svg {
-        z-index: 6;
+    .products {
+        grid-template-columns: auto;
+    }
+    .perspectiveCard {
+        width: 90vw;
     }
 }
