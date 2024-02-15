@@ -502,4 +502,8 @@ footer {
         background-size: contain;
         background-repeat: no-repeat;
     }
+    .txtDiv {
+        font-size: 16px;
+        line-height: 30px;
+    }
 }
