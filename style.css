@@ -317,7 +317,7 @@ header {
 .aboutDiv {
     margin-top: 3rem;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     font-family: "Protest Strike", sans-serif;
     display: flex;
     align-items: start;
@@ -465,8 +465,8 @@ footer {
     .herotxt {
         position: absolute;
         top: 5.5rem;
-        width: 40vw;
-        height: 100vh;
+        width: 100vw;
+        height: 70vh;
         z-index: 5;
         background-color: #ffffffce;
         transform: rotate(0);
