@@ -195,7 +195,7 @@ header {
     justify-content: center;
     grid-template-columns: auto auto auto;
     gap: 6rem 3rem;
-    height: 100vh;
+    height: fit-content;
 }
 
 .perspectiveCard {
@@ -285,6 +285,142 @@ header {
     font-size: 20px;
 }
 
+.seeMore {
+    margin-top: 3rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(175, 170, 170);
+    padding-bottom: 2rem;
+}
+
+.seeMore button {
+    padding: 15px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid rgb(175, 170, 170);
+    color: black;
+    background: none;
+    font-family: "Protest Strike", sans-serif;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+}
+
+.seeMore button:hover {
+    background-color: #fb8a22;
+    color: white;
+    transform: translateY(-20px);
+}
+
+.aboutDiv {
+    margin-top: 3rem;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Protest Strike", sans-serif;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.txtDiv {
+    margin-left: .5rem;
+    width: 50vw;
+    font-size: 18px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-top: 2rem;
+    line-height: 40px;
+}
+
+.aboutImg {
+    width: 40vw;
+    height: inherit;
+    border-bottom-left-radius: 150px;
+}
+
+.img1 {
+    background: url(img/dogSketch3-.png);
+    width: 30vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: -1;
+    transition-duration: .5;
+    transition-timing-function: ease-in-out;
+}
+
+.aboutDiv {
+    border-bottom: 1px solid rgb(175, 170, 170);
+}
+
+footer {
+    width: 100vw;
+    height: 50vh;
+}
+
+@media (min-width: 820px) and (max-width: 1024px) {
+    .herosection {
+        display: flex;
+        position: relative;
+    }
+    .heroimg {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+    }
+    .img {
+        width: 100vw;
+        height: 75vh;
+    }
+    .herotxt {
+        position: absolute;
+        top: 5.5rem;
+        width: 100vw;
+        height: 70vh;
+        z-index: 5;
+        background-color: #ffffffce;
+        transform: rotate(0);
+        font-size: 40px;
+        line-height: normal;
+        justify-content: space-around;
+        font-weight: bolder;
+        gap: 2rem;
+        /* word-break: break-all; */
+        /* text-wrap: wrap; */
+    }
+    .products {
+        grid-template-columns: auto auto;
+        width: 100vw;
+    }
+    .productCard {
+        width: 40vw;
+        height: 50vh;
+    }
+    .productimg {
+        height: 30vh;
+    }
+    .perspectiveCard {
+        width: 40vw;
+    }
+    .aboutDiv {
+        flex-direction: column;
+    }
+    .txtDiv {
+        width: 100vw;
+    }
+    .aboutImg {
+        width: 100vw;
+    }
+    .img1 {
+        width: 100vw;
+        height: 80vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         padding: 0px 40px 0px 40px;
@@ -351,42 +487,19 @@ header {
     .perspectiveCard {
         width: 80vw;
     }
-}
-
-@media (max-width: 1024px) {
-    .herosection {
-        display: flex;
-        position: relative;
+    .aboutDiv {
+        flex-direction: column;
     }
-    .heroimg {
-        position: absolute;
-        top: 0;
+    .txtDiv {
         width: 100vw;
     }
-    .img {
+    .aboutImg {
         width: 100vw;
-        height: 75vh;
     }
-    .herotxt {
-        position: absolute;
-        top: 5.5rem;
+    .img1 {
         width: 100vw;
-        height: 70vh;
-        z-index: 5;
-        background-color: #ffffffce;
-        transform: rotate(0);
-        font-size: 40px;
-        line-height: normal;
-        justify-content: space-around;
-        font-weight: bolder;
-        gap: 2rem;
-        /* word-break: break-all; */
-        /* text-wrap: wrap; */
-    }
-    .products {
-        grid-template-columns: auto;
-    }
-    .perspectiveCard {
-        width: 90vw;
+        height: 80vh;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }

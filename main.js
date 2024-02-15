@@ -13,16 +13,24 @@ const closeMenu = () => {
 }
 
 let img = document.getElementById('img');
+let img1 = document.getElementById('img1');
 
 let i = 0;
 
 const images = [
   "url('img/dogSketch-.png')",
   "url('img/dogSketch1-.png')",
-  "url('img/dogSketch3-.png')"
+  "url('img/dogSketch3-.png')",
+  "url('img/dogSketch4-.png')",
+  "url('img/dogSketch5.png')",
 ];
 
 setInterval(() => {
   img.style.backgroundImage = images[i];
+  i = (i + 1) % images.length;
+}, 5000);
+
+setInterval(() => {
+  img1.style.backgroundImage = images[i];
   i = (i + 1) % images.length;
 }, 5000);
