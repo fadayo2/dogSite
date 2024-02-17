@@ -356,8 +356,59 @@ header {
 }
 
 footer {
+    position: relative;
     width: 100vw;
     height: 50vh;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.foot {
+    position: absolute;
+    bottom: 0;
+}
+
+.footDiv {
+    width: 300px;
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+    z-index: 10;
+    margin-left: 7rem;
+    margin-top: 2rem;
+}
+
+.footDiv a {
+    font-family: "Protest Strike", sans-serif;
+    transition-timing-function: ease-in-out;
+    transition-duration: .1s;
+    font-size: 18px;
+}
+
+.footDiv a:hover {
+    transform: translate(3px , 3px);
+}
+
+.footLink {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.copyright {
+    width: 100vw;
+    position: absolute;
+    bottom: 1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Protest Strike", sans-serif;
+    padding-left: 7rem;
+    padding-right: 5rem;
 }
 
 @media (min-width: 820px) and (max-width: 1024px) {
@@ -418,6 +469,9 @@ footer {
         height: 80vh;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+    footer {
+        height: 30vh;
     }
 }
 
@@ -505,5 +559,19 @@ footer {
     .txtDiv {
         font-size: 16px;
         line-height: 30px;
+    }
+    .footDiv {
+        margin-left: 0;
+    }
+    .copyright {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+    }
+    .footLink {
+        width: 100px;
+    }
+    .foot {
+        display: none;
     }
 }
