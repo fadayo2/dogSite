@@ -34,3 +34,55 @@ setInterval(() => {
   img1.style.backgroundImage = images[i];
   i = (i + 1) % images.length;
 }, 5000);
+
+
+let home = document.getElementById('home');
+let homeMo = document.getElementById('homeMo');
+let product = document.getElementById('product');
+let productMo = document.getElementById('productMo');
+let about = document.getElementById('about');
+let aboutMo = document.getElementById('aboutMo');
+let contact = document.getElementById('contact');
+let contactMo = document.getElementById('contactMo');
+let seeMore = document.getElementById('seeMore');
+
+home.addEventListener('click', ()=>{
+  window.location.href = 'index.html'
+})
+
+home.addEventListener('click', ()=>{
+  home.style.color = 'red'
+})
+
+
+homeMo.addEventListener('click', ()=>{
+  window.location.href = 'index.html'
+})
+
+product.addEventListener('click', ()=>{
+  window.location.href = 'product.html'
+})
+
+productMo.addEventListener('click', ()=>{
+  window.location.href = 'product.html'
+})
+
+about.addEventListener('click', ()=>{
+  window.location.href = 'about.html'
+})
+
+aboutMo.addEventListener('click', ()=>{
+  window.location.href = 'about.html'
+})
+
+contact.addEventListener('click', ()=>{
+  window.location.href = 'contact.html'
+})
+
+contactMo.addEventListener('click', ()=>{
+  window.location.href = 'contact.html'
+})
+
+seeMore.addEventListener('click' , ()=>{
+  window.location.href = 'product.html'
+})
