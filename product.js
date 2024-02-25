@@ -77,7 +77,46 @@ document.addEventListener('DOMContentLoaded', function() {
             notyf.success('Item added successfully to cart');
         });
     });
+
+    // Get all product cards
+    const productCards = document.querySelectorAll('.productCard');
+
+    // Add click event listener to each product card
+    // Add click event listener to each product card
+productCards.forEach(function(card) {
+    card.addEventListener('click', function() {
+        // Extract the product details from the card
+        const productId = card.dataset.productId;
+        const productName = card.dataset.productName;
+        const productPrice = parseFloat(card.dataset.productPrice);
+        const productImage = card.dataset.productImage;
+
+        // Check if any of the product details are null or undefined
+        if (!productId || !productName || isNaN(productPrice) || !productImage) {
+            console.error('Error: Invalid product data on product card.');
+            return;
+        }
+
+        // Create an object representing the product
+        const product = {
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage
+        };
+
+        try {
+            // Store the product details in localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+            console.log('Product details stored in localStorage:', product);
+        } catch (error) {
+            console.error('Error storing product details in localStorage:', error);
+        }
+
+        // Construct the URL of the product page
+        const productPageUrl = 'productPage.html'; // Replace with your actual product page URL
+        // Redirect the user to the product page
+        window.location.href = productPageUrl;
+    });
 });
-
-
-
+    });

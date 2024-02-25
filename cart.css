@@ -11,8 +11,15 @@
 }
 .cartBody {
     margin-top: 2rem;
-    /* height: 50vh; */
-    /* overflow: hidden; */
+}
+
+.cartMsg {
+    font-family: "Protest Strike", sans-serif;
+    color: #fb8a22;
+    text-align: center;
+    margin-top: 10rem;
+    font-size: 50px;
+    text-transform: capitalize;
 }
 
 .productInCart {

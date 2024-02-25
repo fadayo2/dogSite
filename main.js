@@ -50,11 +50,6 @@ home.addEventListener('click', ()=>{
   window.location.href = 'index.html'
 })
 
-home.addEventListener('click', ()=>{
-  home.style.color = 'red'
-})
-
-
 homeMo.addEventListener('click', ()=>{
   window.location.href = 'index.html'
 })
