@@ -54,6 +54,30 @@
     color: white;
 }
 
+.checkout-btn {
+    font-family: "Protest Strike", sans-serif;
+    padding: 15px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    background: none;
+    font-size: 17px;
+    letter-spacing: 1px;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.checkout-btn:hover {
+    background-color: #fb8a22;
+    color: white;
+    border: none;
+}
+
 @media (max-width: 768px) {
     .productInCart {
         flex-direction: column;

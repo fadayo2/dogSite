@@ -13,7 +13,7 @@ const load = () => {
         const emptyCartMessage = document.createElement('div');
         emptyCartMessage.textContent = 'Cart is empty';
         cartBody.appendChild(emptyCartMessage);
-        emptyCartMessage.classList.add('cartMsg')
+        emptyCartMessage.classList.add('cartMsg');
         return;
     }
 
@@ -50,17 +50,14 @@ const load = () => {
                 load();
             }
 
-            var notyf = new Notyf(
-                {
-                    duration: 3000,
-                    position : {
-                        x : 'center',
-                        y : 'top'
-                    },
-                    
-                    dismissible: true,
-                }
-            );
+            var notyf = new Notyf({
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                dismissible: true,
+            });
             // Display a success notification
             notyf.success('Item successfully removed from cart');
         });
@@ -70,9 +67,21 @@ const load = () => {
         product.appendChild(productPrice);
         product.appendChild(productQuantity);
         product.appendChild(button);
-
         cartBody.appendChild(product);
     });
+
+    // Create and append the checkout button outside the loop
+    const checkoutButton = document.createElement('button');
+    checkoutButton.textContent = 'Checkout';
+    checkoutButton.classList.add('checkout-btn');
+    checkoutButton.addEventListener('click', () => {
+        // Add your checkout logic here, such as redirecting to a checkout page
+        console.log('Checkout button clicked');
+        // For example:
+        // window.location.href = 'checkout.html';
+    });
+
+    cartBody.appendChild(checkoutButton);
 }
 
 // Call the load function to initially populate the cart

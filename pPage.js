@@ -45,7 +45,22 @@ const addToCart = () => {
     updateCartCount();
     
     // Optionally, you can provide feedback to the user that the product was added to the cart
-    alert(productData.name + " added to cart!");
+    // alert(productData.name + " added to cart!");
+
+    var notyf = new Notyf(
+        {
+            duration: 3000,
+            position : {
+                x : 'center',
+                y : 'top'
+            },
+            
+            dismissible: true,
+        }
+    );
+    // Display a success notification
+    notyf.success('Item added successfully to cart');
+    
 }
 
 // Call the load function to populate the product details
